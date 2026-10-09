@@ -12,15 +12,15 @@ Documentar cómo se aplican los principios SOLID en el backend del Marketplace, 
 
 ## SOLID en el módulo Pedidos
 
-![SOLID en el módulo Pedidos](/img/solid-modulo-pedidos.png)
+![SOLID en el módulo Pedidos](../../../img/solid-modulo-pedidos.png)
 
 | Principio | Dónde se aplica (capa) | Cómo se cumple en el Marketplace | Archivos |
 |---|---|---|---|
-| **S** · Responsabilidad única | Todas las capas | Cada clase tiene una sola tarea: el controlador recibe la petición HTTP, el caso de uso coordina la compra, la entidad aplica las reglas del pedido y el repositorio guarda en PostgreSQL | `order.controller.js`, `crear-pedido.use-case.js`, `pedido.js`, `postgres-order-repository.js` |
-| **O** · Abierto/cerrado | Infraestructura | Para agregar una nueva pasarela (PayPal) se crea un nuevo adaptador; el caso de uso de compra no se modifica | `stripe-payment.adapter.js`, `paypal-payment.adapter.js` |
-| **L** · Sustitución de Liskov | Infraestructura | Stripe y PayPal devuelven el mismo resultado `{ aprobado, autorizacion }`; el caso de uso funciona igual con cualquiera | `stripe-payment.adapter.js`, `paypal-payment.adapter.js` |
-| **I** · Segregación de interfaces | Dominio | Cada interfaz tiene solo lo que Pedidos necesita: `PaymentPort` solo cobra, `ErpPort` solo registra el pedido, `OrderRepository` solo guarda y busca pedidos | `payment-port.js`, `erp-port.js`, `order-repository.js` |
-| **D** · Inversión de dependencias | Aplicación | El caso de uso recibe interfaces por el constructor y no conoce Stripe, PostgreSQL ni el ERP; las implementaciones se conectan en `pedidos.module.js` | `crear-pedido.use-case.js`, `pedidos.module.js` |
+| **S** · Responsabilidad única | Todas las capas | Cada clase tiene una sola tarea: el controlador recibe la petición HTTP, el caso de uso coordina la compra, la entidad aplica las reglas del pedido y el repositorio guarda en PostgreSQL | `order.controller.ts`, `crear-pedido.use-case.ts`, `pedido.ts`, `postgres-order-repository.ts` |
+| **O** · Abierto/cerrado | Infraestructura | Para agregar una nueva pasarela (PayPal) se crea un nuevo adaptador; el caso de uso de compra no se modifica | `stripe-payment.adapter.ts`, `paypal-payment.adapter.ts` |
+| **L** · Sustitución de Liskov | Infraestructura | Stripe y PayPal devuelven el mismo resultado `{ aprobado, autorizacion }`; el caso de uso funciona igual con cualquiera | `stripe-payment.adapter.ts`, `paypal-payment.adapter.ts` |
+| **I** · Segregación de interfaces | Dominio | Cada interfaz tiene solo lo que Pedidos necesita: `PaymentPort` solo cobra, `ErpPort` solo registra el pedido, `OrderRepository` solo guarda y busca pedidos | `payment-port.ts`, `erp-port.ts`, `order-repository.ts` |
+| **D** · Inversión de dependencias | Aplicación | El caso de uso recibe interfaces por el constructor y no conoce Stripe, PostgreSQL ni el ERP; las implementaciones se conectan en `pedidos.module.ts` | `crear-pedido.use-case.ts`, `pedidos.module.ts` |
 
 ## Qué pasaría sin SOLID en el Marketplace
 
@@ -39,4 +39,3 @@ Documentar cómo se aplican los principios SOLID en el backend del Marketplace, 
 | Abierto/cerrado y Liskov | El patrón Adapter (pasarela de pagos y ERP) |
 | Segregación de interfaces | Los puertos del dominio (`PaymentPort`, `ErpPort`, `OrderRepository`) |
 | Inversión de dependencias | El patrón Repository y la regla de dependencia: las capas externas dependen del dominio |
-

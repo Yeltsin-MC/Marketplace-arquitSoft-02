@@ -14,10 +14,10 @@ Documentar los patrones de diseño aplicados en el backend del Marketplace, indi
 
 | Patrón | Dónde se usa | Problema que resuelve | Se implementa con | Archivos en el código |
 |---|---|---|---|---|
-| Adapter | Pagos → Pasarela de pagos | La pasarela tiene su propia API | SDK o API REST de la pasarela | `payment-port.js`, `stripe-payment.adapter.js` |
-| Adapter | Pedidos → ERP | El ERP tiene su propia API | API REST del ERP (axios o fetch) | `erp-port.js`, `erp.adapter.js` |
-| Repository | Todos los módulos → Base de datos | El negocio no debe conocer SQL | PostgreSQL (librería `pg` u ORM) | `order-repository.js`, `postgres-order-repository.js` |
-| Decorator | Catálogo → Caché | Consultar productos más rápido sin modificar el repositorio | Redis | `cached-product-repository.js` |
+| Adapter | Pagos → Pasarela de pagos | La pasarela tiene su propia API | SDK o API REST de la pasarela | `payment-port.ts`, `stripe-payment.adapter.ts` |
+| Adapter | Pedidos → ERP | El ERP tiene su propia API | API REST del ERP (axios o fetch) | `erp-port.ts`, `erp.adapter.ts` |
+| Repository | Todos los módulos → Base de datos | El negocio no debe conocer SQL | PostgreSQL (librería `pg` u ORM) | `order-repository.ts`, `postgres-order-repository.ts` |
+| Decorator | Catálogo → Caché | Consultar productos más rápido sin modificar el repositorio | Redis | `cached-product-repository.ts` |
 
 ## Cómo funciona cada patrón
 
