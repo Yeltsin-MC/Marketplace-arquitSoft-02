@@ -20,9 +20,9 @@ Mostrar el **Marketplace como una sola caja**: quiénes lo usan y con qué siste
 
 ## 2. Diagrama
 
-![Diagrama de contexto del Marketplace](/img/nivel1-contexto.png)
+![Diagrama de contexto del Marketplace](../../img/nivel1-contexto.png)
 
-> Archivo editable: `img/fuentes/nivel1-contexto.drawio`
+> Archivo editable: `img/fuentes-svg/nivel1-contexto.drawio`
 
 ---
 

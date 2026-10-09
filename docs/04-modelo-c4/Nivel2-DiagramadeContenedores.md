@@ -21,9 +21,9 @@ Abrir la caja «Marketplace» del nivel 1 y mostrar los **contenedores** que la 
 
 ## 2. Diagrama
 
-![Diagrama de contenedores del Marketplace](/img/nivel2-contenedores.png)
+![Diagrama de contenedores del Marketplace](../../img/nivel2-contenedores.png)
 
-> Archivo editable: `img/fuentes/nivel2-contenedores.drawio`
+> Archivo editable: `img/fuentes-svg/nivel2-contenedores.drawio`
 
 ---
 

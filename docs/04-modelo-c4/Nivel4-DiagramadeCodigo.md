@@ -21,9 +21,9 @@ Mostrar **cómo está organizado el código** de un componente del nivel 3: sus 
 
 ## 2. Diagrama de clases
 
-![Diagrama de clases de los módulos Pedidos y Pagos](/img/nivel4-clases.png)
+![Diagrama de clases de los módulos Pedidos y Pagos](../../img/nivel4-clases.png)
 
-> Archivo editable: `img/fuentes/nivel4-clases.svg`
+> Archivo editable: `img/fuentes-svg/nivel4-clases.svg`
 
 ### 2.1 Capas de Clean Architecture
 
@@ -74,9 +74,9 @@ Mostrar **cómo está organizado el código** de un componente del nivel 3: sus 
 
 ## 3. Diagrama de secuencia: confirmar compra
 
-![Diagrama de secuencia de confirmar compra](/img/nivel4-secuencia.png)
+![Diagrama de secuencia de confirmar compra](../../img/nivel4-secuencia.png)
 
-> Archivo editable: `img/fuentes/nivel4-secuencia.svg`
+> Archivo editable: `img/fuentes-svg/nivel4-secuencia.svg`
 
 | Paso | Origen → destino | Acción |
 |---|---|---|

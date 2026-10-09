@@ -21,9 +21,9 @@ Abrir el contenedor **API Marketplace** del nivel 2 y mostrar sus **componentes*
 
 ## 2. Diagrama
 
-![Diagrama de componentes de la API Marketplace](/img/nivel3-componentes.png)
+![Diagrama de componentes de la API Marketplace](../../img/nivel3-componentes.png)
 
-> Archivo editable: `img/fuentes/nivel3-componentes.drawio`
+> Archivo editable: `img/fuentes-svg/nivel3-componentes.drawio`
 
 ---
 
@@ -76,7 +76,7 @@ Abrir el contenedor **API Marketplace** del nivel 2 y mostrar sus **componentes*
 | # | Regla | Motivo |
 |---|---|---|
 | 1 | Todos los componentes se despliegan juntos en el contenedor API Marketplace | Es un monolito: un solo proceso y un solo despliegue |
-| 2 | Un módulo usa a otro solo a través de su API pública (`index.js`) | Evita que un cambio interno en un módulo rompa a los demás |
+| 2 | Un módulo usa a otro solo a través de su API pública (`index.ts`) | Evita que un cambio interno en un módulo rompa a los demás |
 | 3 | Un módulo no lee ni escribe las tablas de otro módulo | Mantiene la independencia de los datos de cada módulo |
 | 4 | Cada sistema externo se integra en un único módulo | La integración queda en un solo lugar y es fácil de reemplazar |
 | 5 | Cada módulo se organiza por dentro con Clean Architecture | Las reglas de negocio no dependen de la tecnología (ver nivel 4) |
